@@ -22,7 +22,7 @@ i = st.text_input('Digite o nome ou número do Pokémon', 'bulbasaur').title()
 try:
   i = int(i)-1
 except:
-  i = df[df['Name']==i]['No']-1
+  i = int(df[df['Name']==i]['No'])-1
 
 col1, col2 = st.columns(2)
 with col1:
