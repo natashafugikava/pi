@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 from math import pi
 import streamlit as st
+import warnings
+warnings.filterwarnings("ignore")
 
 df = pd.read_csv('Pokedex_Ver_SV2.csv').drop_duplicates(subset='Original_Name').reset_index(drop=True)
 
@@ -28,7 +30,7 @@ with col1:
   ax.plot(angulos, valores, linewidth=1, linestyle='solid')
   ax.fill(angulos, valores, 'b', alpha=0.1)
   plt.title(f'{df.at[i,"Original_Name"]}')
-  st.pyplot(fig)
+  st.pyplot(plt.show())
 
   
 
