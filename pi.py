@@ -39,7 +39,7 @@ with col1:
   st.pyplot(plt.show())
 
 with col2:
-  image = mpimg.imread(f'{df.at[i,"Name"].lower()}.png')
+  image = mpimg.imread(f'{df.at[i,"Name"].lower().replace('n ','n-').replace('r. ','r-')}.png')
   imgplot = plt.imshow(image)
   imgplot.axes.get_xaxis().set_visible(False)
   imgplot.axes.get_yaxis().set_visible(False)
