@@ -1,4 +1,4 @@
-%matplotlib inline
+
 import pandas as pd
 from pokebase import pokemon
 from requests import get
