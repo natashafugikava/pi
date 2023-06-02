@@ -18,7 +18,7 @@ angulos.append(angulos[0])
 
 st.header('Pokédex')
 
-i = st.text_input('Digite o nome ou número do Pokémon', 'bulbasaur').title()
+i = st.text_input('Digite o nome ou número do Pokémon', 'bulbasaur').title().replace('r M','r. M')
 try:
   i = int(i)-1
 except:
