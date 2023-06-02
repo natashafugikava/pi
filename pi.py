@@ -4,8 +4,7 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 from math import pi
 import streamlit as st
-import warnings
-warnings.filterwarnings("ignore")
+st.set_option('deprecation.showPyplotGlobalUse', False)
 
 df = pd.read_csv('Pokedex_Ver_SV2.csv').drop_duplicates(subset='Original_Name').reset_index(drop=True)
 
