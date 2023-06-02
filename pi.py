@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 from math import pi
 import streamlit as st
-from PIL import Image
+from matplotlib import image as mpimg
+
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 df = pd.read_csv('Pokedex_Ver_SV2.csv').drop_duplicates(subset='Original_Name').reset_index(drop=True)
@@ -38,7 +39,7 @@ with col1:
   st.pyplot(plt.show())
 
 with col2:
-  image = Image.open(f'{df.at[i,"Name"].lower()}.png')
+  image = mpimg.imread(f'{df.at[i,"Name"].lower()}.png')
   imgplot = plt.imshow(image)
   imgplot.axes.get_xaxis().set_visible(False)
   imgplot.axes.get_yaxis().set_visible(False)
