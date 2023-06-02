@@ -5,7 +5,7 @@ import matplotlib.image as mpimg
 from math import pi
 import streamlit as st
 
-df = pd.read_csv('/content/drive/MyDrive/Pokedex_Ver_SV2.csv').drop_duplicates(subset='Original_Name').reset_index(drop=True)
+df = pd.read_csv('Pokedex_Ver_SV2.csv').drop_duplicates(subset='Original_Name').reset_index(drop=True)
 
 categorias = ['HP', 'Attack', 'Defense', 'SP_Attack', 'SP_Defense', 'Speed']
 N = 6
