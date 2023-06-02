@@ -2,8 +2,4 @@ pandas
 matplotlib
 seaborn
 pokebase
-PIL
-io
-IPython
-time
-math
+
