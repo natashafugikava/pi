@@ -18,7 +18,7 @@ st.header('Pokédex')
 
 i = st.text_input('Digite o nome ou número do Pokémon', 'bulbasaur')
 try:
-  i = int(i)+1
+  i = int(i)-1
 except:
   pass
 
@@ -37,7 +37,7 @@ with col1:
   st.pyplot(plt.show())
 
 with col2:
-  imgplot = plt.imshow(f'{df.at[i,"Name"].lower()}'.png)
+  imgplot = plt.imshow(f'{df.at[i,"Name"].lower()}.png')
   imgplot.axes.get_xaxis().set_visible(False)
   imgplot.axes.get_yaxis().set_visible(False)
   st.pyplot(plt.show())
