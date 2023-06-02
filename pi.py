@@ -22,7 +22,7 @@ col1, col2 = st.columns(2)
 with col1:
   valores = df.loc[i][['HP', 'Attack', 'Defense', 'SP_Attack', 'SP_Defense', 'Speed']].values.tolist()
   valores.append(valores[0])
-  fig, ax = plt.subplot(111, polar=True)
+  ax = plt.subplot(111, polar=True)
   plt.xticks(angulos[:-1], categorias, color='grey', size=8)
   ax.set_rlabel_position(0)
   plt.yticks([64,128,192], ["64","128","192"], color="grey", size=7)
