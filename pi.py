@@ -7,6 +7,7 @@ import streamlit as st
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 df = pd.read_csv('Pokedex_Ver_SV2.csv').drop_duplicates(subset='Original_Name').reset_index(drop=True)
+df = df[df['Generation']==1]
 
 categorias = ['HP', 'Attack', 'Defense', 'SP_Attack', 'SP_Defense', 'Speed']
 N = 6
@@ -15,7 +16,11 @@ angulos.append(angulos[0])
 
 st.header('Pokédex')
 
-i=1
+i = st.text_input('Digite o nome ou número do Pokémon', 'bulbasaur')
+try:
+  i = int(i)+1
+except:
+  pass
 
 col1, col2 = st.columns(2)
 with col1:
@@ -31,7 +36,11 @@ with col1:
   plt.title(f'{df.at[i,"Original_Name"]}')
   st.pyplot(plt.show())
 
-  
+with col2:
+  imgplot = plt.imshow(f'{df.at[i,'Name'].lower()}'.png)
+  imgplot.axes.get_xaxis().set_visible(False)
+  imgplot.axes.get_yaxis().set_visible(False)
+  st.pyplot(plt.show())
 
   
 
