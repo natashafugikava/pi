@@ -28,7 +28,7 @@ with col1:
   ax.plot(angulos, valores, linewidth=1, linestyle='solid')
   ax.fill(angulos, valores, 'b', alpha=0.1)
   plt.title(f'{df.at[i,"Original_Name"]}')
-  st.pyplot(ax)
+  st.pyplot(plt.show())
 
   
 
