@@ -1,13 +1,7 @@
 
 import pandas as pd
-from pokebase import pokemon
-from requests import get
-from PIL import Image
-from io import BytesIO
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
-from IPython.display import clear_output
-from time import sleep
 from math import pi
 import streamlit as st
 
