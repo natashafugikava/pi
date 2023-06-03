@@ -47,5 +47,6 @@ with col2:
   imgplot.axes.get_yaxis().set_visible(False)
   st.pyplot(plt.show())
 
+  st.metric('Tipo', df.at[i,'Type1'])
   
 
