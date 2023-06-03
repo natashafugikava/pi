@@ -57,7 +57,7 @@ with col3:
   st.metric('Altura', df.at[i,'Height'])
   st.metric('Peso', df.at[i,'Weight'])
 
-with cold4:
+with col4:
   st.metric('Macho', df.at[i,'Gender_Male'])
   st.metric('Fêmea', df.at[i,'Gender_Female'])
   st.metric('Desconhecido', df.at[i,'Gender_Unknown'])
