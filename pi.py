@@ -25,7 +25,7 @@ except:
   i = int(df[df['Name']==i]['No'])-1
 
 col1, col2 = st.columns(2)
-col3, col4, col5 = st.columns(3)
+col3, col4, col5, col6 = st.columns(4)
 
 with col1:
   valores = df.loc[i][['HP', 'Attack', 'Defense', 'SP_Attack', 'SP_Defense', 'Speed']].values.tolist()
@@ -68,6 +68,10 @@ with col5:
    st.metric('Habilidade 2', df.at[i,'Ability2'])
   if not pd.isna(df.at[i,'Ability_Hidden']):
     st.metric('Habilidade oculta', df.at[i,'Ability_Hidden'])    
-
+   
+with col6:    
+  st.metric('Grupo 1', df.at[i,'Egg_Group1'])
+  if not pd.isna(df.at[i,'Egg_Group2']):
+    st.metric('Grupo 2', df.at[i,'Egg_Group2'])
   
 
