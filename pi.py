@@ -48,9 +48,8 @@ with col2:
   st.pyplot(plt.show())
 
   st.metric('Tipo', df.at[i,'Type1'])
-  try:
-    st.metric('Tipo', df[~df['Type2'].isna()]['Type2'])
-  except:
-    pass
+  if df.at[i,'Type2']:
+    st.metric('Tipo', df.at[i,'Type2'])
+
   
 
