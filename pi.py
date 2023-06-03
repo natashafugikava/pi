@@ -48,7 +48,7 @@ with col2:
   st.pyplot(plt.show())
 
   st.metric('Tipo', df.at[i,'Type1'])
-  if df.at[i,'Type2'] != nan:
+  if df.at[i,'Type2'] != NaN:
     st.metric('Tipo', df.at[i,'Type2'])
 
   
