@@ -54,8 +54,8 @@ with col2:
     st.metric('Tipo 2', df.at[i,'Type2'])
 
 with col3:
-  st.metric('Altura', df.at[i,'Height'])
-  st.metric('Peso', df.at[i,'Weight'])
+  st.metric('Altura', str(df.at[i,'Height'])+' m')
+  st.metric('Peso', str(df.at[i,'Weight'])+' Kg')
 
 with col4:
   st.metric('Macho', df.at[i,'Gender_Male'])
