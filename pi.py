@@ -47,9 +47,9 @@ with col2:
   imgplot.axes.get_yaxis().set_visible(False)
   st.pyplot(plt.show())
 
-  st.metric('Tipo', df.at[i,'Type1'])
+  st.metric('Tipo 1', df.at[i,'Type1'])
   if not pd.isna(df.at[i,'Type2']):
-    st.metric('Tipo', df.at[i,'Type2'])
+    st.metric('Tipo 2', df.at[i,'Type2'])
 
   
 
