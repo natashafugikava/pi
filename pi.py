@@ -48,5 +48,6 @@ with col2:
   st.pyplot(plt.show())
 
   st.metric('Tipo', df.at[i,'Type1'])
+  st.metric('Tipo', df.at[i,'Type2'])
   
 
