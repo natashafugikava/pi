@@ -48,15 +48,18 @@ with col2:
   imgplot.axes.get_yaxis().set_visible(False)
   st.pyplot(plt.show())
 
-  with col3:
-    st.metric('Tipo 1', df.at[i,'Type1'])
-    if not pd.isna(df.at[i,'Type2']):
-      st.metric('Tipo 2', df.at[i,'Type2'])
-      
-  with col4:
-    st.metric('Habilidade 1', df.at[i,'Ability1'])
-    st.metric('Habilidade 2', df.at[i,'Ability2'])    
-    st.metric('Habilidade oculta', df.at[i,'Ability_Hidden'])    
+  st.metric('Tipo 1', df.at[i,'Type1'])
+  if not pd.isna(df.at[i,'Type2']):
+    st.metric('Tipo 2', df.at[i,'Type2'])
+
+with col3:
+  st.metric('Altura', df.at[i,'Height'])
+  st.metric('Peso', df.at[i,'Weight'])
+  
+with col4:
+  st.metric('Habilidade 1', df.at[i,'Ability1'])
+  st.metric('Habilidade 2', df.at[i,'Ability2'])    
+  st.metric('Habilidade oculta', df.at[i,'Ability_Hidden'])    
 
   
 
