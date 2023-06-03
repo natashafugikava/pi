@@ -38,9 +38,7 @@ with col1:
   plt.title(f'{df.at[i,"Original_Name"]}')
   st.pyplot(plt.show())
   
-  fig, ax = plt.subplots()
-  ax.bar(valores, categorias)
-  st.pyplot(fig)
+  st.bar_chart(df.loc[i][['HP', 'Attack', 'Defense', 'SP_Attack', 'SP_Defense', 'Speed']])
 
 with col2:
   image = mpimg.imread(f"{df.at[i,'Name'].lower().replace('n ','n-').replace('r. ','r-')}.png")
