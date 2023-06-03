@@ -58,8 +58,10 @@ with col3:
   
 with col4:
   st.metric('Habilidade 1', df.at[i,'Ability1'])
-  st.metric('Habilidade 2', df.at[i,'Ability2'])    
-  st.metric('Habilidade oculta', df.at[i,'Ability_Hidden'])    
+  if not pd.isna(df.at[i,'Ability2']):
+   st.metric('Habilidade 2', df.at[i,'Ability2'])
+  if not pd.isna(df.at[i,'Ability_Hidden']):
+    st.metric('Habilidade oculta', df.at[i,'Ability_Hidden'])    
 
   
 
