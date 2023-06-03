@@ -25,7 +25,8 @@ except:
   i = int(df[df['Name']==i]['No'])-1
 
 col1, col2 = st.columns(2)
-col3, col4 = st.columns(2)
+col3, col4, col5 = st.columns(3)
+
 with col1:
   valores = df.loc[i][['HP', 'Attack', 'Defense', 'SP_Attack', 'SP_Defense', 'Speed']].values.tolist()
   valores.append(valores[0])
@@ -55,8 +56,13 @@ with col2:
 with col3:
   st.metric('Altura', df.at[i,'Height'])
   st.metric('Peso', df.at[i,'Weight'])
+
+with cold4:
+  st.metric('Macho', df.at[i,'Gender_Male'])
+  st.metric('Fêmea', df.at[i,'Gender_Female'])
+  st.metric('Desconhecido', df.at[i,'Gender_Unknown'])
   
-with col4:
+with col5:
   st.metric('Habilidade 1', df.at[i,'Ability1'])
   if not pd.isna(df.at[i,'Ability2']):
    st.metric('Habilidade 2', df.at[i,'Ability2'])
