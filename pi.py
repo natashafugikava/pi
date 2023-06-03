@@ -50,5 +50,7 @@ with col2:
   st.metric('Tipo', df.at[i,'Type1'])
   try:
     st.metric('Tipo', df[~df['Type2'].isna()]['Type2'])
+   except:
+    pass
   
 
