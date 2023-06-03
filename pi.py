@@ -25,6 +25,7 @@ except:
   i = int(df[df['Name']==i]['No'])-1
 
 col1, col2 = st.columns(2)
+col3, col4 = st.columns(2)
 with col1:
   valores = df.loc[i][['HP', 'Attack', 'Defense', 'SP_Attack', 'SP_Defense', 'Speed']].values.tolist()
   valores.append(valores[0])
@@ -47,9 +48,15 @@ with col2:
   imgplot.axes.get_yaxis().set_visible(False)
   st.pyplot(plt.show())
 
-  st.metric('Tipo 1', df.at[i,'Type1'])
-  if not pd.isna(df.at[i,'Type2']):
-    st.metric('Tipo 2', df.at[i,'Type2'])
+  with col3:
+    st.metric('Tipo 1', df.at[i,'Type1'])
+    if not pd.isna(df.at[i,'Type2']):
+      st.metric('Tipo 2', df.at[i,'Type2'])
+      
+  with col4:
+    st.metric('Habilidade 1', df.at[i,'Ability1'])
+    st.metric('Habilidade 2', df.at[i,'Ability2'])    
+    st.metric('Habilidade oculta', df.at[i,'Ability_Hidden'])    
 
   
 
