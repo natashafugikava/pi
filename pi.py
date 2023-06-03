@@ -58,9 +58,9 @@ with col3:
   st.metric('Peso', str(df.at[i,'Weight'])+' Kg')
 
 with col4:
-  st.metric('Macho', df.at[i,'Gender_Male'])
-  st.metric('Fêmea', df.at[i,'Gender_Female'])
-  st.metric('Desconhecido', df.at[i,'Gender_Unknown'])
+  st.metric('Macho', str(df.at[i,'Gender_Male'])+' %')
+  st.metric('Fêmea', str(df.at[i,'Gender_Female'])+' %')
+  st.metric('Desconhecido', str(df.at[i,'Gender_Unknown'])+' %')
   
 with col5:
   st.metric('Habilidade 1', df.at[i,'Ability1'])
