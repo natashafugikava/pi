@@ -37,6 +37,10 @@ with col1:
   ax.fill(angulos, valores, 'b', alpha=0.1)
   plt.title(f'{df.at[i,"Original_Name"]}')
   st.pyplot(plt.show())
+  
+  fig, ax = plt.subplots()
+  ax.bar(valores, categorias)
+  st.pyplot(fig)
 
 with col2:
   image = mpimg.imread(f"{df.at[i,'Name'].lower().replace('n ','n-').replace('r. ','r-')}.png")
