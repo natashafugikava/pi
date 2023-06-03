@@ -25,7 +25,7 @@ except:
   i = int(df[df['Name']==i]['No'])-1
 
 col1, col2 = st.columns(2)
-col3, col4, col5= st.columns(1,1,2)
+col3, col4, col5= st.columns(3)
 
 with col1:
   valores = df.loc[i][['HP', 'Attack', 'Defense', 'SP_Attack', 'SP_Defense', 'Speed']].values.tolist()
